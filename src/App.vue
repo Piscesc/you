@@ -10,5 +10,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="stylus">
+  body
+    overflow: hidden
 </style>

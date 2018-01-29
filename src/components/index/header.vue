@@ -6,31 +6,55 @@
         <span class="iconfont">搜索商品,共5989款好物</span>
       </div>
     </div>
-    <div class="header-bottom">
-      <div class="header-nav">
-        <div class="tab active"><span class="txt" >推荐</span></div>
-        <div class="tab"><span class="txt" >家居</span></div>
-        <div class="tab"><span class="txt" >餐厨</span></div>
-        <div class="tab"><span class="txt" >配件</span></div>
-        <div class="tab"><span class="txt" >服装</span></div>
-        <div class="tab"><span class="txt" >电器</span></div>
-        <div class="tab"><span class="txt" >洗护</span></div>
-        <div class="tab"><span class="txt" >杂货</span></div>
-        <div class="tab"><span class="txt" >饮食</span></div>
-        <div class="tab"><span class="txt" >婴童</span></div>
-        <div class="tab"><span class="txt" >志趣</span></div>
-      </div>
+    <div ref="wrapper">
+        <ul class="content">
+          <li class="tab active">推荐</li>
+          <li class="tab"><span class="txt">家居</span></li>
+          <li class="tab"><span class="txt">餐厨</span></li>
+          <li class="tab"><span class="txt">配件</span></li>
+          <li class="tab"><span class="txt">服装</span></li>
+          <li class="tab"><span class="txt">电器</span></li>
+          <li class="tab"><span class="txt">洗护</span></li>
+          <li class="tab"><span class="txt">杂货</span></li>
+          <li class="tab"><span class="txt">饮食</span></li>
+          <li class="tab"><span class="txt">婴童</span></li>
+          <li class="tab"><span class="txt">志趣</span></li>
+        </ul>
     </div>
   </div>
 </template>
 
 <script>
+import BScroll from 'better-scroll'
+
 export default {
-  name: 'Header'
+  name: 'Header',
+  watch: {
+    sights () {
+      this.$nextTick(() => {
+        this.wrapper.refresh()
+      })
+    }
+  },
+  mounted () {
+    this.createScroll()
+  },
+  methods: {
+    createScroll () {
+      this.wrapper = new BScroll(this.$refs.wrapper, {
+        probeType: 3,
+        scrollX: true,
+        scrollY: false,
+        click: true
+      })
+    }
+  }
 }
 </script>
 
 <style lang="stylus">
+  body
+    overflow: hidden
   .header-top
     padding: .21333rem .4rem
     display: flex
@@ -56,29 +80,19 @@ export default {
     font-size: .37333rem
     background-color: #ededed
     border-radius: .10667rem
-  .header-bottom
-    position: relative
-    height: 100%
-    width: 100%
-    overflow: hidden
-  .header-nav
-    display: flex
-    transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1)
-    transition-duration: 0ms
-    transform: translate(0px, 0px) translateZ(0px)
-    flex-shrink: 0
-    padding: 0 .4rem
-    background: #fff
+  .content
+    width: 21rem
+    padding: 0 .213rem
   .tab:first-of-type
-    margin-left: 0
+    margin-left: .4rem
+    border-bottom: .05333rem solid #b4282d
   .tab
-    flex-shrink: 0
-    position: relative
+    display: inline-block
     margin-left: .64rem
-    display: flex
-    flex-flow: row nowrap
     align-items: center
     text-align: center
+    font-size: .373rem
+    height: .55rem
   .active
     color: #b4282d
   .txt
@@ -88,12 +102,4 @@ export default {
     font-size: .37333rem
     text-align: center
     box-sizing: border-box
-    &:after
-      content: ' '
-      position: absolute
-      left: 0
-      bottom: 0
-      width: 100%
-      height: .05333rem
-      background-color: #b4282d
 </style>
