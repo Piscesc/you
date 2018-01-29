@@ -7,7 +7,9 @@
 </template>
 
 <script>
-	
+	export default {
+		name : "classify"
+	}
 </script>
 
 <style scoped lang="scss">
