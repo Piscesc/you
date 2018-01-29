@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Index from '@/components/index/index'
 import Classify from '@/components/classify'
 import Login from '@/components/login'
+import Search from '@/components/common/search'
 
 Vue.use(Router)
 
@@ -22,6 +23,11 @@ export default new Router({
       path: '/login',
       name: 'login',
       component: Login
+    },
+    {
+      path: '/search',
+      name: 'search',
+      component: Search
     }
   ]
 })
