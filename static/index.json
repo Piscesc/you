@@ -1,0 +1,24 @@
+{
+  "ret": true,
+  "data": {
+    "sights": [{
+      "id": "3001",
+      "imgUrl": "http://yanxuan.nosdn.127.net/d26ff3e189f869f99cf5b812fa3ae6be.jpg"
+    }, {
+      "id": "3002",
+      "imgUrl": "http://yanxuan.nosdn.127.net/1057df5341d023a340a603dc6a6f5fe7.jpg"
+    }, {
+      "id": "3003",
+      "imgUrl": "http://yanxuan.nosdn.127.net/e5891a68df93c5ee57ddb5b256068dac.jpg"
+    }, {
+      "id": "3004",
+      "imgUrl": "http://yanxuan.nosdn.127.net/50ddf56e7160da81638128c8b8883dc2.jpg"
+    }, {
+      "id": "3005",
+      "imgUrl": "http://yanxuan.nosdn.127.net/890ed24c6c9ee5248ce80daed8e1109a.jpg"
+    }, {
+      "id": "3006",
+      "imgUrl": "http://yanxuan.nosdn.127.net/3fedbb7916c13289d2f22e2720cc3447.jpg"
+    }]
+  }
+}
