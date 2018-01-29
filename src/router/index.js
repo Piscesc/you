@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Index from '@/components/index'
+import Index from '@/components/index/index'
 import Classify from '@/components/classify'
 import Login from '@/components/login'
 
