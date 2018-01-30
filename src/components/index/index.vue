@@ -1,13 +1,15 @@
 <template>
-  <div>
+  <div class="main">
     <index-header></index-header>
     <index-swiper :sights="sights"></index-swiper>
+    <index-footer></index-footer>
   </div>
 </template>
 
 <script>
 import indexHeader from './header'
 import indexSwiper from './swiper'
+import indexFooter from './footer'
 import axios from 'axios'
 export default {
 
@@ -19,7 +21,8 @@ export default {
   },
   components: {
     indexHeader,
-    indexSwiper
+    indexSwiper,
+    indexFooter
   },
   methods: {
     getIndexData () {
@@ -48,4 +51,4 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped></style>
+<style lang="stylus" scoped>
