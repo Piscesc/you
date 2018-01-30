@@ -3,7 +3,8 @@
     <div class="header-top">
       <a class="logo" href="javascript:;"></a>
       <div class="header-ipt">
-        <span class="iconfont">搜索商品,共5989款好物</span>
+        <i class="iconfont">&#xe612;</i>
+        <span class="icon">搜索商品,共5989款好物</span>
       </div>
     </div>
     <div ref="wrapper">
@@ -52,9 +53,7 @@ export default {
 }
 </script>
 
-<style lang="stylus">
-  body
-    overflow: hidden
+<style lang="stylus" scoped>
   .header-top
     padding: .21333rem .4rem
     display: flex
@@ -80,6 +79,12 @@ export default {
     font-size: .37333rem
     background-color: #ededed
     border-radius: .10667rem
+  .icon
+      color: #666
+  .iconfont
+    margin-right: .1rem
+    font-size: .2rem
+    color: #666
   .content
     width: 21rem
     padding: 0 .213rem
