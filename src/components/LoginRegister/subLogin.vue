@@ -20,7 +20,8 @@
 					<a href="#" id="dologin">登录</a>
 				</div>
 				<div class="unlogin">
-					<a href="javascript:;" id="toRegister">注册账号</a><a>忘记密码</a>
+					<router-link to="/register" id="toRegister">注册账号</router-link>
+					<a href="#">忘记密码</a>
 				</div>
 			</div>
 		</div>

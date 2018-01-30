@@ -4,6 +4,7 @@ import Index from '@/components/index/index'
 import Classify from '@/components/classify'
 import Login from '@/components/login'
 import Search from '@/components/common/search'
+import Register from '@/components/LoginRegister/Register'
 
 Vue.use(Router)
 
@@ -28,6 +29,11 @@ export default new Router({
       path: '/search',
       name: 'search',
       component: Search
+    },
+    {
+      path: '/register',
+      name: 'register',
+      component: Register
     }
   ]
 })
