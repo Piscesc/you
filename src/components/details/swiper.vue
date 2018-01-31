@@ -21,12 +21,12 @@
         <p class="desc">{{info.desc}}</p>
         <p class="price">&yen;{{info.price}}</p>
         <ul class="taglist">
-          <li class="tag">{{info.tag}}</li>
+          <li class="tag">{{info.tag}} ></li>
         </ul>
       </div>
       <div class="des-right">
         <p class="num">{{info.comment}}</p>
-        <p class="com">用户评价</p>
+        <p class="comm">用户评价</p>
         <p class="more">查看</p>
       </div>
     </div>
@@ -57,10 +57,64 @@ export default {
 <style lang="stylus" scoped>
 .container
   position: relative
+  .select
+    padding-left: .4rem;
   .describe
     padding: .533rem 0 .533rem .4rem
     border-bottom: .267rem solid #f4f4f4
     display: flex
+    .des-lfet
+      flex: 1
+      line-height: 1.5
+      color: #333
+      .title
+        font-size: .48rem
+        margin-bottom: .067rem
+      .desc
+        font-size: .373rem
+        line-height: 1
+        color: #7f7f7f
+      .price
+        height: .747rem
+        margin-bottom: .107rem
+        font-size: .64rem
+        color: #B4282D
+        font-weight: 700
+      .tag
+        margin-right: .213rem
+        margin-top: .267rem
+        display: inline-block
+        height: .48rem
+        line-height: .48rem
+        padding: 0 .133rem
+        font-size: .32rem
+        color: #f48f18
+        border: 1px solid #f48f18
+        border-radius: 4px
+    .des-right
+      display: flex
+      width: 2.08rem
+      border-left: 1px dashed #ccc
+      justify-content: center
+      flex-direction: column
+      align-items: center
+      line-height: 1.5
+      .num
+        font-weight: 700
+        font-size: .48rem
+        line-height: 1
+        margin-bottom: .13333rem
+        color: #B4282D
+      .comm
+        color: #B4282D
+        line-height: 1
+        margin-bottom: .26667rem
+      .more
+        border: 1px solid #7F7F7F
+        border-radius: 2px
+        text-align: center
+        width: 1rem
+        color: #333
   .character
     display: flex
     padding: .32rem .4rem .1rem
