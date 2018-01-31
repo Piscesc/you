@@ -5,7 +5,7 @@ import Classify from '@/components/classify'
 import Login from '@/components/login'
 import Search from '@/components/common/search'
 import Details from '@/components/details/details'
-
+import Register from '@/components/LoginRegister/Register'
 Vue.use(Router)
 
 export default new Router({
@@ -34,6 +34,11 @@ export default new Router({
       path: '/details',
       name: 'Details',
       component: Details
+    },
+    {
+      path: '/register',
+      name: 'register',
+      component: Register
     }
   ]
 })

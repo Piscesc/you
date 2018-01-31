@@ -1,13 +1,13 @@
 <template>
 	<div class="login">
 		<headBar/>
-		<div class="login-main">
+		<div class="login-main" :class="{hide:deflag}">
 			<div class="login-banner">
 				<img src="//yanxuan.nosdn.127.net/bd139d2c42205f749cd4ab78fa3d6c60.png" />
 			</div>
 			<div class="warpers">
 				<div class="btnWarper">
-					<button>网易邮箱账号登陆</button>
+					<button @click="changeFlag()">网易邮箱账号登陆</button>
 				</div>	
 				<div class="otherWarper">
 					<div class="warper-item" v-for="item in warper">
@@ -19,7 +19,8 @@
 				</div>
 			</div>
 		</div>
-		<subLogin/>	
+		<subLogin :class="{hide:flag}"/>
+		<div class="otherlogin" :class="{hide:flag}" @click="changeFlag()">其他方式登录</div>	
 	</div>
 </template>
 
@@ -34,12 +35,20 @@
 					{'icon':"//yanxuan.nosdn.127.net/bc022cb24519b44aae271981482a88ed.png", 'name':"微信"},
 					{'icon':"//yanxuan.nosdn.127.net/0ff2d0f09d2003e9e32a0200ce3e32bc.png", 'name':"QQ"},
 					{'icon':"//yanxuan.nosdn.127.net/3b4bf1201b74efeca582d2333368d297.png", 'name':"微博"}
-				]
+				],
+				flag: true,
+				deflag : false
 			}
 		},
 		components : {
 			headBar,
 			subLogin
+		},
+		methods:{
+			changeFlag(){
+				this.flag = !this.flag;
+				this.deflag = !this.deflag;
+			}
 		}
 	}
 </script>
@@ -119,5 +128,20 @@
     		}
 		}
 	}
-	
+	.otherlogin{
+	    width: 8.93333rem;
+	    height: 1.30667rem;
+	    line-height: 1.30667rem;
+	    border: 1px solid #B4282D;
+	    color: #B4282D;
+	    position: absolute;
+	    top: 11.02667rem;
+	    bottom: 0;
+	    left: .53333rem;
+	    background: #fff;
+	    z-index: 5;
+        border-radius: .05333rem;
+	    font-size: .37333rem;
+	    text-align: center;
+	}
 </style>
