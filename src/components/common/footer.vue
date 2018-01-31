@@ -49,6 +49,7 @@ export default {
 <style lang="stylus" scoped>
   .footerBott
     width: 100%
+    position: fixed
     bottom: 0
     display: flex
     flex-flow: row nowrap

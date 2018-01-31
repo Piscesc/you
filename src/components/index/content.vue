@@ -17,7 +17,9 @@
                 <span class="price">元起</span>
               </div>
             </div>
-            <img :src="item.imgUrl" class="itemImg">
+            <router-link to="/details">
+              <img :src="item.imgUrl" class="itemImg">
+            </router-link>
           </a>
         </li>
       </ul>
