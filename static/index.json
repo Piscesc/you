@@ -19,6 +19,23 @@
     }, {
       "id": "3006",
       "imgUrl": "http://yanxuan.nosdn.127.net/3fedbb7916c13289d2f22e2720cc3447.jpg"
+    }],
+    "list": [{
+      "id": "1001",
+      "imgUrl": "http://yanxuan.nosdn.127.net/2fc924ae44eb0a37dda18690368851af.png",
+      "price": "35"
+    }, {
+      "id": "1002",
+      "imgUrl": "http://yanxuan.nosdn.127.net/1a11408a40798e6574df29675a22664a.png",
+      "price": "359"
+    }, {
+      "id": "1003",
+      "imgUrl": "http://yanxuan.nosdn.127.net/4bdc2ae0a30c4a10ea95876a67c695bc.png",
+      "price": "12.9"
+    }, {
+      "id": "1004",
+      "imgUrl": "http://yanxuan.nosdn.127.net/658009bf4e1d5288242642277aaab767.jpg",
+      "price": "149"
     }]
   }
 }

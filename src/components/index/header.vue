@@ -8,19 +8,19 @@
       </div>
     </div>
     <div ref="wrapper">
-        <ul class="content">
-          <li class="tab active">推荐</li>
-          <li class="tab"><span class="txt">家居</span></li>
-          <li class="tab"><span class="txt">餐厨</span></li>
-          <li class="tab"><span class="txt">配件</span></li>
-          <li class="tab"><span class="txt">服装</span></li>
-          <li class="tab"><span class="txt">电器</span></li>
-          <li class="tab"><span class="txt">洗护</span></li>
-          <li class="tab"><span class="txt">杂货</span></li>
-          <li class="tab"><span class="txt">饮食</span></li>
-          <li class="tab"><span class="txt">婴童</span></li>
-          <li class="tab"><span class="txt">志趣</span></li>
-        </ul>
+      <ul class="content">
+        <li class="tab active">推荐</li>
+        <li class="tab"><span class="txt">家居</span></li>
+        <li class="tab"><span class="txt">餐厨</span></li>
+        <li class="tab"><span class="txt">配件</span></li>
+        <li class="tab"><span class="txt">服装</span></li>
+        <li class="tab"><span class="txt">电器</span></li>
+        <li class="tab"><span class="txt">洗护</span></li>
+        <li class="tab"><span class="txt">杂货</span></li>
+        <li class="tab"><span class="txt">饮食</span></li>
+        <li class="tab"><span class="txt">婴童</span></li>
+        <li class="tab"><span class="txt">志趣</span></li>
+      </ul>
     </div>
   </div>
 </template>
