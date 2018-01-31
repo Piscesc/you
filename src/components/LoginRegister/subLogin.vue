@@ -17,7 +17,7 @@
 					</div>
 				</div>
 				<div class="submitbar">
-					<a href="#" id="dologin">登录</a>
+					<button class="dologin" @click="login()" :class="{able:userName}">登录</button>
 				</div>
 				<div class="unlogin">
 					<router-link to="/register" id="toRegister">注册账号</router-link>
@@ -29,6 +29,8 @@
 </template>
 
 <script>
+	import { Toast } from 'mint-ui';
+	import axios from 'axios';
 	var umsg = document.getElementById("username");
 	var upwd = document.getElementById("pwd");
 	export default {
@@ -36,7 +38,8 @@
 		data(){
 			return {
 				userName : "",
-				password : ""
+				password : "",
+				message : ""
 			}
 		},
 		methods:{
@@ -46,6 +49,21 @@
 			clearPwd(){
 				this.password = "";
 			},
+			login(){
+				axios.post("http://localhost:3000/login4ajax",{
+					'username' : this.userName,
+					'psw' : this.password
+				})
+				.then((res)=>{
+					console.log(res);
+					this.message = res.data.message;
+					Toast(this.message);
+					console.log(res.data.code);
+					if(res.data.code == 100){
+						this.$router.push({ path: '/', params: { userId: this.userName }});
+					}
+				})
+			}
 		}
 	}
 </script>
@@ -103,16 +121,21 @@
     		    margin: 0.8rem 0 0.53333rem;
     		    clear: both;
     		    overflow: hidden;
-    		    #dologin{
+    		    .dologin{
     		    	display: block;
+    		    	width: 100%;
 		    	    height: 1.28rem;
-				    font-size: 0.4rem;
+				    font-size: 0.5rem;
+				    font-weight: bold;
 				    line-height: 1.28rem;
 				    border-radius: 3px;
 		        	color: #cb7a7a;
 	        	    position: relative;
 				    background: #b4282d;
 				    text-align: center;
+    		    }
+    		    .able{
+    		    	color: white;
     		    }
 	    	}
 	    	.unlogin{

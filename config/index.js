@@ -12,11 +12,15 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
         '/api': {
-        target: 'http://localhost:8080',
-        pathRewrite: {
-          '/api': '/static'
+            target: 'http://localhost:8080',
+            pathRewrite: {
+              '/api': '/static'
+            }
+        },
+        '/regist4ajax': {
+            target: 'http://localhost:3000',
+            changeOrigin:true,//允许跨域
         }
-      }
     },
 
     // Various Dev Server settings

@@ -4,13 +4,13 @@
 		<div class="main">
 			<div class="email">
 				<div class="address-title">
-					<input type="text" placeholder="6-18位字母数字组合" id="e-address">
+					<input type="text" placeholder="6-18位字母数字组合" id="e-address" v-model="userName">
 				</div>
 				<div class="domain">@163.com</div>
 			</div>
 			<p class="error email-err" :class="{show:flag1}">邮箱格式错误</p>
 			<div class="password">
-				<input type="password" placeholder="请输入密码" id="pwd1">
+				<input type="password" placeholder="请输入密码" id="pwd1" v-model="psw">
 				<div class="flags"></div>
 			</div>
 			<div class="password">
@@ -31,12 +31,15 @@
 
 <script>
 	import { Toast } from 'mint-ui';
+	import axios from 'axios';
 	export default {
 		name : "register",
 		data () {
 			return {
 				flag1 : false,
-				flag2 : false
+				flag2 : false,
+	            userName:'',
+	            psw:''
 			}
 		},
 		methods:{
@@ -49,8 +52,20 @@
 				collection1 ? this.flag1 = false : this.flag1 = true;
 				pwd1 == pwd2 ? this.flag2 = false : this.flag2 = true;
 				if(collection1 && (pwd1 == pwd2)){
+					console.log(this.userName);
+					console.log(this.psw);
 					Toast('注册成功');
+					this.register();
 				}
+			},
+			register(){
+				axios.post("http://localhost:3000/regist4ajax",{
+					'username' : this.userName + "@163.com",
+					'psw' : this.psw
+				})
+				.then((res)=>{
+					console.log(res);
+				})
 			}
 		}
 	}

@@ -7,6 +7,7 @@ import 'swiper/dist/css/swiper.css'
 import Mint from 'mint-ui'
 import 'mint-ui/lib/style.css'
 import 'assets/css/iconfont/iconfont.css'
+import axios from 'axios'
 
 Vue.config.productionTip = false
 Vue.use(VueAwesomeSwiper)
@@ -16,5 +17,11 @@ new Vue({
   el: '#app',
   router,
   components: { App },
-  template: '<App/>'
+  template: '<App/>',
+  mounted(){
+  	axios.get('http://localhost:3000/test',{headers:{"Content-Type":""}})
+  	.then(function(res){
+  		console.log(res.data);
+  	});
+  }
 })
