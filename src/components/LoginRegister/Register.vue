@@ -25,6 +25,11 @@
 			<div class="tips">
 				用户注册即代表同意<a href="//reg.163.com/agreement_wap.shtml?20160825">《服务条款》</a>和<a href="//reg.163.com/agreement_game_wap.shtml?20160825">《网易隐私政策》</a>
 			</div>
+			<div v-if="abled">
+				<router-link to="/login">
+					<button class="toLogin">去登陆</button>
+				</router-link>
+			</div>
 		</div>
 	</div>
 </template>
@@ -39,7 +44,8 @@
 				flag1 : false,
 				flag2 : false,
 	            userName:'',
-	            psw:''
+	            psw:'',
+	            abled : false
 			}
 		},
 		methods:{
@@ -55,6 +61,7 @@
 					console.log(this.userName);
 					console.log(this.psw);
 					Toast('注册成功');
+					this.abled = true;
 					this.register();
 				}
 			},
@@ -156,7 +163,7 @@
 	    .code{
 	    	margin-top: 0.6rem;
 	    	position: relative;
-		    width: 320px;
+		    width: 100%;
 		    height: 34px;
 		    border: 1px solid #cbcbcb;
 		    -webkit-border-radius: 90px;
@@ -190,6 +197,15 @@
 	    	a{
 	    		color: #0095ff;
 	    	}
+	    }
+	    .toLogin{
+	    	display: block;
+	    	width: 40%;
+	    	height: 1rem;
+	    	font-size: .4rem;
+	    	margin:0 auto;
+	    	background: none;
+	    	border: 1px solid #000;
 	    }
 	}
 </style>

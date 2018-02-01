@@ -1,0 +1,18 @@
+{
+  "ret": true,
+  "data": {
+    "recomList": [{
+      "id": "2001",
+      "imgUrl": "https://yanxuan.nosdn.127.net/5771cfaaf7639798da3ddbe8439281dd.jpg"
+    }, {
+      "id": "2002",
+      "imgUrl": "https://yanxuan.nosdn.127.net/d36c1c5a1d4ebfd65e58790af121327e.jpg"
+    }, {
+      "id": "2003",
+      "imgUrl": "https://yanxuan.nosdn.127.net/827cf20ac9142e8aa2dfad11ee71cc29.jpg"
+    }, {
+      "id": "2004",
+      "imgUrl": "https://yanxuan.nosdn.127.net/8c78aac563beede244dcb476bbcc679b.jpg"
+    }]
+  }
+}

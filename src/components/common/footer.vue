@@ -6,7 +6,7 @@
         <span class="list">首页</span>
       </a>
     </router-link>
-    <router-link to="/">
+    <router-link to="/recommend">
       <a href="javascript:;" class="iconfont">
         <i class="icon">&#xe60a;</i>
         <span class="list">识物</span>

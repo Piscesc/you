@@ -2,10 +2,14 @@
   <div class="header">
     <div class="header-top">
       <a class="logo" href="javascript:;"></a>
-      <div class="header-ipt">
-        <i class="iconfont">&#xe612;</i>
-        <span class="icon">搜索商品,共5989款好物</span>
-      </div>
+        <div class="header-ipt">
+          <router-link to="/search">
+            <div>
+              <i class="iconfont">&#xe612;</i>
+              <span class="icon">搜索商品,共5989款好物</span>
+            </div>
+          </router-link>
+        </div>
     </div>
     <div ref="wrapper">
       <ul class="content">

@@ -1,6 +1,8 @@
 <template>
 	<div class="topbar">
-		<i class="u-icon-index"></i>
+		<router-link to="/">
+			<i class="u-icon-index"></i>
+		</router-link>
 		<div class="logo">
 			<i></i>
 		</div>
