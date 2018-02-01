@@ -6,11 +6,8 @@ import Login from '@/components/login'
 import Search from '@/components/common/search'
 import Details from '@/components/details/details'
 import Register from '@/components/LoginRegister/Register'
-<<<<<<< HEAD
 import Cart from '@/components/Cart/cart'
-=======
 import Recommend from '@/components/recommend/recommend'
->>>>>>> 8ab6f8df9c484798f8528ef9725b142a9616ecc1
 Vue.use(Router)
 
 export default new Router({
