@@ -35,12 +35,13 @@
 				</ul>
 			</div>
 		</div>
+		<foot/>
 	</div>
 </template>
 
 <script>
 	import axios from 'axios';
-	
+	import Foot from './common/footer';
 	
 	export default {
 		name : "classify",
@@ -56,6 +57,9 @@
 				originalData:[],
 				subList:[]
 			}
+		},
+		components:{
+			Foot
 		},
 		watch: {
 			originalData () {
