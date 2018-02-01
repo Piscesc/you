@@ -59,7 +59,7 @@
 				}
 			},
 			register(){
-				axios.post("http://localhost:3000/regist4ajax",{
+				axios.post("http://10.9.158.144:3000/regist4ajax",{
 					'username' : this.userName + "@163.com",
 					'psw' : this.psw
 				})

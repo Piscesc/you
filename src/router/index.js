@@ -6,6 +6,7 @@ import Login from '@/components/login'
 import Search from '@/components/common/search'
 import Details from '@/components/details/details'
 import Register from '@/components/LoginRegister/Register'
+import Cart from '@/components/Cart/cart'
 Vue.use(Router)
 
 export default new Router({
@@ -39,6 +40,11 @@ export default new Router({
       path: '/register',
       name: 'register',
       component: Register
+    },
+    {
+      path: '/cart',
+      name: 'Cart',
+      component: Cart
     }
   ]
 })

@@ -17,11 +17,11 @@ new Vue({
   el: '#app',
   router,
   components: { App },
-  template: '<App/>',
-  mounted(){
-  	axios.get('http://localhost:3000/test',{headers:{"Content-Type":""}})
-  	.then(function(res){
-  		console.log(res.data);
-  	});
-  }
+  template: '<App/>'
+  // mounted(){
+  // 	axios.get('http://localhost:3000/test',{headers:{"Content-Type":""}})
+  // 	.then(function(res){
+  // 		console.log(res.data);
+  // 	});
+  // }
 })
