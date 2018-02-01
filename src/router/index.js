@@ -6,6 +6,7 @@ import Login from '@/components/login'
 import Search from '@/components/common/search'
 import Details from '@/components/details/details'
 import Register from '@/components/LoginRegister/Register'
+import Recommend from '@/components/recommend/recommend'
 Vue.use(Router)
 
 export default new Router({
@@ -39,6 +40,11 @@ export default new Router({
       path: '/register',
       name: 'register',
       component: Register
+    },
+    {
+      path: '/recommend',
+      name: 'recommend',
+      component: Recommend
     }
   ]
 })

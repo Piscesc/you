@@ -82,5 +82,4 @@ export default {
     position: absolute
     z-index: 200
     bottom: 0
-
 </style>
