@@ -1,7 +1,12 @@
 <template>
-  <div>
-    <swiper :recomList="recomList"></swiper>
-    <recomation></recomation>
+  <div class="mian">
+    <div ref="wrapper" class="scroller">
+      <div>
+        <swiper :recomList="recomList"></swiper>
+        <recomation></recomation>
+        <recom-foot></recom-foot>
+      </div>
+    </div>
     <recom-footer class="footer"></recom-footer>
   </div>
 </template>
@@ -11,7 +16,9 @@
 import Swiper from './swiper'
 import recomFooter from '../common/footer'
 import Recomation from './recommendation'
+import RecomFoot from './recomfoot'
 import axios from 'axios'
+import BScroll from 'better-scroll'
 
 export default {
   name: 'Recommend',
@@ -23,7 +30,8 @@ export default {
   components: {
     Swiper,
     recomFooter,
-    Recomation
+    Recomation,
+    RecomFoot
   },
   methods: {
     getData () {
@@ -33,8 +41,6 @@ export default {
     },
     handleDataSucc (res) {
        res = res ? res.data : null
-      console.log(res)
-      console.log(res.ret)
       if (res && res.ret && res.data) {
         res.data.recomList && (this.recomList = res.data.recomList)
       } else {
@@ -43,14 +49,37 @@ export default {
     },
     handleDataError () {
       console.log('error')
+    },
+    createScroll () {
+      this.$nextTick(() => {
+        this.wrapper = new BScroll(this.$refs.wrapper, {
+          probeType: 3,
+          scrollX: false,
+          scrollY: true,
+          click: true
+        })
+      })     
     }
   },
   created() {
     this.getData()
+  },
+  mounted() {
+    this.createScroll()
   }
 }
 </script>
 
 <style lang="stylus" scoped>
-
+  .mian
+    display: flex
+    flex-direction: column
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    .scroller
+      flex: 1
+      overflow: hidden
 </style>

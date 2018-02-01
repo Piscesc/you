@@ -38,8 +38,6 @@ export default {
     },
     handleDataSucc (res) {
       res = res ? res.data : null
-      console.log(res)
-      console.log(res.ret)
       if (res && res.ret && res.data) {
         res.data.sights && (this.sights = res.data.sights)
         res.data.list && (this.list = res.data.list)

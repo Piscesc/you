@@ -11,6 +11,4 @@ export default {
 </script>
 
 <style lang="stylus">
-  body
-    overflow: hidden
 </style>
