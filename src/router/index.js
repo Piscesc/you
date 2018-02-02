@@ -9,7 +9,6 @@ import Register from '@/components/LoginRegister/Register'
 import Cart from '@/components/Cart/cart'
 import Recommend from '@/components/recommend/recommend'
 import SelectCount from '@/components/details/selectCount'
-
 Vue.use(Router)
 
 export default new Router({
