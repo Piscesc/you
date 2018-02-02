@@ -3,23 +3,26 @@
     <div class="left">
       <p class="left-cs">
         <i class="check"></i>
-        <span class="selected">已选(1)</span>
+        <span class="selected">已选({{count}})</span>
       </p>
-      <p class="price">￥329</p>
+      <p class="price">￥{{329.00*count}}</p>
     </div>
     <div class="btn">下单</div>
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
-
   name: 'Order',
-
   data () {
     return {
 
     }
+  },
+   computed: {
+    ...mapState(['count'])
   }
 }
 </script>
@@ -46,6 +49,7 @@ export default {
         .check
           width: .50667rem
           height: .50667rem
+          margin-right: .32rem
           background: url('//yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/checkbox-sed825af9d3-a6b8540d42.png') no-repeat
           background-size: .50667rem 6.48rem
           background-position: 0 -2.56rem
@@ -54,6 +58,7 @@ export default {
           font-size: .37333rem
     .price
       margin-right: .4rem
+      font-size: .37333rem
       color: #b4282d
     .btn
       width: 3.01333rem

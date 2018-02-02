@@ -18,10 +18,11 @@
         <span class="list">分类</span>
       </a>
     </router-link>
-    <router-link to="/">
+    <router-link to="/cart">
       <a href="javascript:;" class="iconfont">
         <i class="icon">&#xe609;</i>
         <span class="list">购物车</span>
+        <em class="num">{{count}}</em>
       </a>
     </router-link>
     <router-link to="/login">
@@ -34,6 +35,8 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
 
   name: 'Footer',
@@ -42,6 +45,9 @@ export default {
     return {
 
     }
+  },
+  computed: {
+    ...mapState(['count'])
   }
 }
 </script>
@@ -67,6 +73,7 @@ export default {
     flex-direction: column
     align-items: center
     color: #666
+    position: relative
   .icon
     font-size: .5rem
   .list
@@ -74,4 +81,17 @@ export default {
     padding: .1rem 0
   .active
     color: #b4282d
+  .num
+    position: absolute
+    top: -.01333rem
+    right: -.08rem
+    display: inline-block
+    width: .37333rem
+    height: .37333rem
+    border-radius: .18667rem
+    background-color: #b4282d
+    text-align: center
+    line-height: .37333rem
+    font-size: .24rem
+    color: #fff
 </style>

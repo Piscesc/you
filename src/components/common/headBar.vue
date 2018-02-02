@@ -10,7 +10,10 @@
 			<router-link to="/search">
 				<i class="u-icon-search"></i>
 			</router-link>
+      <router-link to="/cart">
 			<i class="u-icon-cart"></i>
+      <span class="num">1</span>
+      </router-link>
 		</div>
 	</div>
 </template>
@@ -68,6 +71,7 @@
     	.right{
 		    margin-left: auto;
     		margin-right: .06667rem;
+        position: relative;
     		.u-icon-search{
 				width: .85333rem;
 			    height: .85333rem;
@@ -79,6 +83,20 @@
 			    height: .85333rem;
 			    background-position: 0 0;
     		}
+        .num{
+            position: absolute;
+            top: -.01333rem;
+            right: -.08rem;
+            display: inline-block;
+            width: .37333rem;
+            height: .37333rem;
+            border-radius: .18667rem;
+            background-color: #b4282d;
+            text-align: center;
+            line-height: .37333rem;
+            font-size: .24rem;
+            color: #fff;
+        }
     	}
 	}
 	.topbar:after{

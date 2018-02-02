@@ -5,6 +5,7 @@
       <div>
         <detail-swiper :list='swiperInfo'></detail-swiper>
         <select-num :product='product'></select-num>
+        <router-view></router-view>
       </div>
     </div>
     <add-car></add-car>

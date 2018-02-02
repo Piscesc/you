@@ -21,15 +21,15 @@
             <div class="m-info">
               <p class="line-a">
                 <em>AAA级淡水珍珠 可调节耳坠</em>
-                <em>x1</em>
+                <em>x{{count}}</em>
               </p>
               <p class="line-b">耳坠</p>
               <div class="line-c">
                 <b class="price">￥329.00</b>
                 <div class="num">
-                  <i class="sym minus limit">-</i>
-                  <input type="text" name="" class="count" value="1">
-                  <i class="sym plus">+</i>
+                  <i class="sym minus" :class="{limit: count <= 1}" @click="reduceCount">-</i>
+                  <input type="text" name="" class="count" :value="count">
+                  <i class="sym plus" @click="addCount">+</i>
                 </div>
               </div>
             </div>
@@ -38,11 +38,14 @@
       </ul>
     </div>
     <order></order>
+    <foot></foot>
   </div>
 </template>
 
 <script>
 import Order from './order'
+import Foot from '../common/footer'
+import { mapState } from 'vuex'
 
 export default {
 
@@ -54,7 +57,22 @@ export default {
     }
   },
   components: {
-    Order
+    Order,
+    Foot
+  },
+  computed: {
+    ...mapState(['count'])
+  },
+  methods: {
+    addCount () {
+      this.$store.commit('increment')
+    },
+    reduceCount () {
+      if (this.count <= 1) {
+        return
+      }
+      this.$store.commit('reduce')
+    }
   }
 }
 </script>
