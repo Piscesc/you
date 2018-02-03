@@ -46,6 +46,7 @@
 import Order from './order'
 import Foot from '../common/footer'
 import { mapState } from 'vuex'
+import { Toast } from 'mint-ui'
 
 export default {
 
@@ -69,6 +70,7 @@ export default {
     },
     reduceCount () {
       if (this.count <= 1) {
+        Toast('本商品1件起售')
         return
       }
       this.$store.commit('reduce')

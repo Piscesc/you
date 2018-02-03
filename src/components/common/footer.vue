@@ -1,7 +1,7 @@
 <template>
   <nav class="footerBott">
     <router-link to="/">
-      <a href="javascript:;" class="iconfont active">
+      <a href="javascript:;" class="iconfont" :class="{acitve:true}">
         <i class="icon">&#xe65f;</i>
         <span class="list">首页</span>
       </a>
@@ -48,6 +48,11 @@ export default {
   },
   computed: {
     ...mapState(['count'])
+  },
+  methods: {
+    changeColor () {
+
+    }
   }
 }
 </script>

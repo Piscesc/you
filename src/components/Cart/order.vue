@@ -2,12 +2,12 @@
   <div class="orders">
     <div class="left">
       <p class="left-cs">
-        <i class="check"></i>
+        <i class="check" :class="{mcheck: flag}" @click="selected"></i>
         <span class="selected">已选({{count}})</span>
       </p>
       <p class="price">￥{{329.00*count}}</p>
     </div>
-    <div class="btn">下单</div>
+    <div class="btn" :class="{mbtn: flag}">下单</div>
   </div>
 </template>
 
@@ -18,11 +18,22 @@ export default {
   name: 'Order',
   data () {
     return {
-
+      flag: false
     }
   },
    computed: {
     ...mapState(['count'])
+  },
+  methods: {
+    selected () {
+      this.flag = !this.flag
+      if (!this.flag) {
+        this.$store.state.count = 0
+        console.log(this.count)
+      } else {
+        
+      }
+    }
   }
 }
 </script>
@@ -53,6 +64,8 @@ export default {
           background: url('//yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/checkbox-sed825af9d3-a6b8540d42.png') no-repeat
           background-size: .50667rem 6.48rem
           background-position: 0 -2.56rem
+        .mcheck
+          background-position: 0 -5.97333rem
         .selected
           line-height: .50667rem
           font-size: .37333rem
@@ -67,6 +80,7 @@ export default {
       font-size: .37333rem
       color: #fff
       text-align: center
-      border: 1px solid #b4282d
       background: #b4282d
+    .mbtn
+      background: #ccc
 </style>
