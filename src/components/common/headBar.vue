@@ -12,15 +12,20 @@
 			</router-link>
       <router-link to="/cart">
 			<i class="u-icon-cart"></i>
-      <span class="num">1</span>
+      <span class="num">{{count}}</span>
       </router-link>
 		</div>
 	</div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 	export default {
-		name : "headBar"
+		name : "headBar",
+    computed: {
+      ...mapState(['count'])
+    }
 	}
 </script>
 

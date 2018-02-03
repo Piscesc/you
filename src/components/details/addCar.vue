@@ -2,7 +2,7 @@
   <div class="add-car">
     <button class="btn server">O</button>
     <button class="btn buy">立即购买</button>
-    <button class="btn add">加入购物车</button>
+    <button class="btn add" @click="toCart">加入购物车</button>
   </div>
 </template>
 
@@ -14,6 +14,11 @@ export default {
   data () {
     return {
 
+    }
+  },
+  methods: {
+    toCart () {
+      this.$router.push('cart')
     }
   }
 }
