@@ -2,8 +2,13 @@
   <div class="main">
     <head-bar></head-bar>
     <div class="content" ref="scroller">
-      <detail-swiper :list='swiperInfo'></detail-swiper>
+      <div>
+        <detail-swiper :list='swiperInfo'></detail-swiper>
+        <select-num :product='product'></select-num>
+        <router-view></router-view>
+      </div>
     </div>
+    <add-car></add-car>
   </div>
 </template>
 
@@ -11,18 +16,24 @@
 import BScroll from 'better-scroll'
 import HeadBar from '../common/headBar'
 import DetailSwiper from './swiper'
+import SelectNum from './selectNum'
+import AddCar from './addCar'
+
 import axios from 'axios'
 
 export default {
   name: 'Details',
   data () {
     return {
-      swiperInfo: {}
+      swiperInfo: {},
+      product: null
     }
   },
   components: {
     HeadBar,
-    DetailSwiper
+    DetailSwiper,
+    SelectNum,
+    AddCar
   },
   methods: {
     getData () {
@@ -34,6 +45,7 @@ export default {
       res = res ? res.data : null
       if (res && res.ret && res.data) {
         this.swiperInfo = res.data
+        this.product = res.data.des[0].select
         this.$nextTick(() => {
           this.scroller = new BScroll(this.$refs.scroller, {
             probeType: 2,

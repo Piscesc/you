@@ -8,6 +8,7 @@ import Mint from 'mint-ui'
 import 'mint-ui/lib/style.css'
 import 'assets/css/iconfont/iconfont.css'
 import axios from 'axios'
+import store from 'store/'
 
 Vue.config.productionTip = false
 Vue.use(VueAwesomeSwiper)
@@ -18,10 +19,11 @@ new Vue({
   router,
   components: { App },
   template: '<App/>',
-  mounted(){
-  	axios.get('http://localhost:3000/test',{headers:{"Content-Type":""}})
-  	.then(function(res){
-  		console.log(res.data);
-  	});
-  }
+  store
+  // mounted(){
+  // 	axios.get('http://localhost:3000/test',{headers:{"Content-Type":""}})
+  // 	.then(function(res){
+  // 		console.log(res.data);
+  // 	});
+  // }
 })

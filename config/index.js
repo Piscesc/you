@@ -18,7 +18,7 @@ module.exports = {
             }
         },
         '/regist4ajax': {
-            target: 'http://localhost:3000',
+            target: 'http://10.9.158.144:3000',
             changeOrigin:true,//允许跨域
         }
     },

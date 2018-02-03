@@ -30,10 +30,6 @@
         <p class="more">查看</p>
       </div>
     </div>
-    <div class="select" v-if="list.des">
-      <p class="selected">已选择：{{list.des[0].select}}x1</p>
-      <p>></p>
-    </div>
   </div>
 </template>
 
@@ -56,14 +52,6 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-  .select
-    display: flex
-    justify-content: space-between
-    margin:0 .4rem
-    border-bottom: 1px solid #d9d9d9
-    align-items: center
-    min-height: 1.387rem
-    font-size: .373rem
   .describe
     padding: .533rem 0 .533rem .4rem
     border-bottom: .267rem solid #f4f4f4

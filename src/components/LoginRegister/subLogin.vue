@@ -50,7 +50,7 @@
 				this.password = "";
 			},
 			login(){
-				axios.post("http://localhost:3000/login4ajax",{
+				axios.post("http://10.9.158.144:3000/login4ajax",{
 					'username' : this.userName,
 					'psw' : this.password
 				})
