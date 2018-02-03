@@ -1,12 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Index from '@/components/index/index'
-import Classify from '@/components/classify'
-import Login from '@/components/login'
+// import Index from '@/components/index/index'
+// import Classify from '@/components/classify'
+// import Login from '@/components/login'
 import Search from '@/components/common/search'
-import Details from '@/components/details/details'
+// import Details from '@/components/details/details'
 import Register from '@/components/LoginRegister/Register'
-import Recommend from '@/components/recommend/recommend'
+// import Recommend from '@/components/recommend/recommend'
 Vue.use(Router)
 
 export default new Router({
@@ -14,17 +14,17 @@ export default new Router({
     {
       path: '/',
       name: 'Index',
-      component: Index
+      component:()=>import('@/components/index/index')
     },
     {
       path: '/classify',
       name: 'classify',
-      component: Classify
+      component: ()=>import('@/components/classify')
     },
     {
       path: '/login',
       name: 'login',
-      component: Login
+      component: ()=>import('@/components/login')
     },
     {
       path: '/search',
@@ -34,7 +34,7 @@ export default new Router({
     {
       path: '/details',
       name: 'Details',
-      component: Details
+      component: ()=>import('@/components/details/details')
     },
     {
       path: '/register',
@@ -44,7 +44,7 @@ export default new Router({
     {
       path: '/recommend',
       name: 'recommend',
-      component: Recommend
+      component: ()=>import('@/components/recommend/recommend')
     }
   ]
 })
