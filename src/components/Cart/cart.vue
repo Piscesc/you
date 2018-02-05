@@ -15,7 +15,7 @@
         <li class="item goods">
           <i class="check"></i>
           <div class="m">
-            <div class="m-img">
+            <div class="m-img" @click="goBack">
               <img src="http://yanxuan.nosdn.127.net/09c03d57ac2d430d9bf8cb6fc390558c.png?imageView&thumbnail=160x0&quality=75">
             </div>
             <div class="m-info">
@@ -74,6 +74,9 @@ export default {
         return
       }
       this.$store.commit('reduce')
+    },
+    goBack () {
+      this.$router.push('details')
     }
   }
 }

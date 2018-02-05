@@ -22,7 +22,7 @@
       <a href="javascript:;" class="iconfont">
         <i class="icon">&#xe609;</i>
         <span class="list">购物车</span>
-        <em class="num">{{count}}</em>
+        <em :class="{num:count}">{{count}}</em>
       </a>
     </router-link>
     <router-link to="/login">

@@ -7,18 +7,23 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
-
   name: 'addCar',
-
   data () {
     return {
 
     }
   },
+  computed: {
+    ...mapState(['seleNum'])
+  },
   methods: {
     toCart () {
-      this.$router.push('cart')
+      // this.$router.push('cart')
+      this.$store.state.count += this.seleNum
+      console.log(this.$store.state.count)
     }
   }
 }

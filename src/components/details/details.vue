@@ -49,7 +49,8 @@ export default {
         this.$nextTick(() => {
           this.scroller = new BScroll(this.$refs.scroller, {
             probeType: 2,
-            scrollX: true
+            scrollX: true,
+            click: true
           })
         })
       }

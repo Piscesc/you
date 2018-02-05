@@ -27,9 +27,8 @@ export default {
   methods: {
     selected () {
       this.flag = !this.flag
-      if (!this.flag) {
-        this.$store.state.count = 0
-        console.log(this.count)
+      if (this.flag) {
+          this.$store.state.count = null    
       } else {
         
       }

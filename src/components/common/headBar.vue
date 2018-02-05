@@ -12,7 +12,7 @@
 			</router-link>
       <router-link to="/cart">
 			<i class="u-icon-cart"></i>
-      <span class="num">{{count}}</span>
+      <span :class="{num:count}">{{count}}</span>
       </router-link>
 		</div>
 	</div>

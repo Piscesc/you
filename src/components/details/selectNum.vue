@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div class="select">
-      <p class="selected">已选择：{{product}}x1</p>
+    <div class="select" @click="changeN">
+      <p class="selected">已选择：{{product}}x{{seleNum}}</p>
       <p>></p>
     </div>
     <div class="select">
@@ -37,6 +37,7 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   name: 'SelectNum',
   props: {
@@ -44,7 +45,15 @@ export default {
   },
   data () {
     return {
-
+      
+    }
+  },
+  computed: {
+    ...mapState(['seleNum'])
+  },
+  methods: {
+    changeN () {
+     this.$store.state.seleNum++
     }
   }
 }

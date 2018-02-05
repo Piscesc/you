@@ -4,13 +4,18 @@
 			<span class="icon"></span>
 			<input type="text" placeholder="经典羊绒围巾超低6折价仅139元" />
 		</div>
-		<span class="cancel">取消</span>
+		<span class="cancel" @click="reGo">取消</span>
 	</div>
 </template>
 
 <script>
 	export default {
-		name : "searchbar"
+		name : "searchbar",
+		methods: {
+			reGo () {
+				this.$router.go(-1)
+			}
+		}
 	}
 </script>
 
